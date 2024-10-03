@@ -1,0 +1,70 @@
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.column {
+  flex: 33.33%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  padding: 1px; /* Add padding to the cards */
+  box-sizing: border-box;
+  cursor: pointer;
+  margin-left: 2px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05); /* Increase the size on hover */
+  border: 1px solid #333; /* Add a border on hover */
+}
+
+.container {
+  padding: 1px;
+}
+
+h2 {
+  color: #333;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin-left: 190px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 50%; /* Make the button round */
+}
+
+.button:hover {
+  background-color: hsl(187, 87%, 39%);
+  color: rgb(29, 18, 18); /* Change text color to gray on hover */
+}
+.loading-spinner {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top: 4px solid #3498db;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+  margin: 10px auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

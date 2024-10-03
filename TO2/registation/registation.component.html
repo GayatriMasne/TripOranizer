@@ -1,0 +1,51 @@
+<h1 style="color:rgb(212, 90, 90); text-align: center; font-family: impact; text-shadow: 5px 5px 2px black; font-size: 50px; ">REGISTRATION FORM</h1>
+
+<fieldset>
+    <h2>User Details</h2>
+
+
+    <form [formGroup]="myform" (ngSubmit)="postUser()" >
+        <label> Name:</label>
+        <input type="text" formControlName="name" required/>
+        
+        <!-- <label>Gender:</label>
+        <input type="radio" name="gender" value="male" ngModel/>Male
+        <input type="radio" name="gender" value="female" ngModel/>Female -->
+
+        <label>BirthDate:</label>
+        <input type="date" formControlName="birthdate" required/>
+        
+        <label>Email Address:</label>
+        <input type="email" formControlName="email" required/>
+        
+        
+        <label> Phone Number: </label>
+        <input type="text" formControlName="phone_number" required>
+       
+    
+        <label> Address:</label>
+        <textarea id="text" formControlName="address"></textarea>
+         
+
+        
+
+        <label> Alternate Number:</label>
+        <input type="text"formControlName="alternate_number" required >
+       
+        <label> Password:</label>
+        <input type="password" formControlName="password" required >
+       
+      
+        
+
+<div class="btn-div">
+
+ <button class="btn-submit" type="submit" >Register</button>
+        <button  class="btn-reset"  type="reset">Reset</button> 
+</div>
+    </form>
+    
+     
+
+    
+</fieldset>  

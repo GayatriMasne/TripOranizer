@@ -1,0 +1,43 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-eIEzF5ZR1e2wrAFO3AzuuwzIS9vlD7eYLbPn9RvDg9J0ZIsyFywAop6LFG5LbM5r" crossorigin="anonymous">
+
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<header>
+	<nav>
+		<div class="logo">
+		Trip<span>Organizer</span>
+		</div>
+		<div class="menu">
+			<a href="home">Home</a>
+			<a href="about">About Us</a>
+			<div class="dropdown">
+				<a href="placetogo">Tours & Packages <i class="fas fa-caret-down"></i></a>
+				
+				<div class="dropdown-content">
+					<a href="placetogo">Place To Go</a>
+					<a href="thingtodo ">Things To Do</a>
+					
+				</div>
+			  </div>
+
+			
+            <a href="feedback">FeedBack</a>
+			<div class="dropdown">
+				<a href="registation">Registation <i class="fas fa-caret-down"></i></a>
+			</div>
+			<a href="contact">Contact</a>
+		</div>
+		
+		<a href="allbooking" style="color:brown;">Show </a>
+		
+		<div class="icon">
+			<a href="login">Login</a>
+        </div>
+
+		<div class="icon">
+			<a href="logout">Logout</a>
+        </div>
+		<h1 style="font-size: medium;color:brown">Welcome {{userIdentity}}</h1>
+	</nav>
+</header>
+
+<router-outlet></router-outlet>
