@@ -1,0 +1,16 @@
+<section class="team">
+    <h1 style="color:blueviolet; text-align: center; font-family: impact; text-shadow: 5px 5px 2px black; font-size: 50px; ">BACHELOR PARTY TRIP PLACES</h1>
+    <div class="team-cards">
+      <div class="card" *ngFor="let place of places; let i = index">
+        <div class="card-img">
+          <img [src]="place.imageSrc" alt="{{ place.name }}">
+        </div>
+        <div class="card-info">
+          <h2 class="card-name">{{ place.name }}</h2>
+          <p class="card-role">{{ place.description }}</p>
+          <div><p><button class="button" (click)="redirectToNextPage(place.routeLink)">Explore</button></p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  

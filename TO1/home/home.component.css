@@ -1,0 +1,310 @@
+/* CSS for main element */
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 520px;
+  position: relative;
+  overflow: hidden;
+  /* Add other styles specific to your intro section here */
+  color: white; /* Example: set text color to white */
+}
+
+.intro::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300%;
+  height: 100%;
+  z-index: -1;
+  background: 
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%),
+      url("../../assets/home2.jpg"),
+      url("../../assets/img34.jpg"),
+      url("../../assets/about5.jpg");
+  background-size: 33.33% 100%;
+  background-position: 0% 0;
+  animation: slideBackground 15s infinite;
+}
+
+@keyframes slideBackground {
+  0% {
+      background-position: 0% 0;
+  }
+  25% {
+      background-position: -100% 0;
+  }
+  50% {
+      background-position: -200% 0;
+  }
+  75% {
+      background-position: -300% 0;
+  }
+  100% {
+      background-position: -100% 0;
+  }
+}
+  .intro h1 {
+    font-family: sans-serif;
+    font-size: 60px;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  .intro p {
+    font-size: 20px;
+    color: #d1d1d1;
+    text-transform: uppercase;
+    margin: 20px 0;
+  }
+
+  .intro button {
+    background-color: #5edaf0;
+    color: #000;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.4)
+  }
+
+  .achievements {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 40px 80px;
+  }
+
+  .achievements .work {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 40px;
+  }
+
+  .achievements .work i {
+    width: fit-content;
+    font-size: 50px;
+    color: #333333;
+    border-radius: 50%;
+    border: 2px solid #333333;
+    padding: 12px;
+  }
+
+  .achievements .work .work-heading {
+    font-size: 20px;
+    color: #333333;
+    text-transform: uppercase;
+    margin: 10px 0;
+  }
+
+  .achievements .work .work-text {
+    font-size: 15px;
+    color: #585858;
+    margin: 10px 0;
+  }
+  .achievements .work {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .achievements .work::before {
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #3498db; /* Light blue color */
+    transition: top 0.3s ease-in-out;
+    z-index: -1;
+    opacity: 0; /* Initially hidden */
+  }
+  
+  .achievements .work:hover::before {
+    top: 0;
+    opacity: 0.7; /* Adjust the opacity as needed */
+  }
+  
+  .achievements .work .work-heading {
+    font-size: 20px;
+    color: #333333;
+    text-transform: uppercase;
+    margin: 10px 0;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .about-me {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 80px;
+    border-top: 2px solid #eeeeee;
+  }
+  
+  .about-me img {
+    width: 500px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    position: absolute;
+  }
+  
+  .about-me img.active {
+    opacity: 1;
+  }
+  
+  .image-container {
+    position: relative;
+    width: 500px; /* Adjust the width based on your image width */
+    height: 500px; /* Adjust the height based on your image height */
+    overflow: hidden;
+    animation: resizeContainer 9s linear infinite;
+  }
+  
+  .image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: rotateImages 9s linear infinite;
+  }
+  
+  @keyframes rotateImages {
+    0% {
+      transform: rotate(0deg);
+    }
+    33.33% {
+      opacity: 1;
+    }
+    66.66% {
+      opacity: 0;
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes resizeContainer {
+    0%, 100% {
+      width: 500px;
+      height: 500px;
+    }
+    50% {
+      width: 400px; /* Adjust the width based on your resized width */
+      height: 400px; /* Adjust the height based on your resized height */
+    }
+  }
+  .about-me-text {
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slideInFromLeft 1.5s ease-out forwards;
+  }
+  
+  @keyframes slideInFromLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  
+
+  .bottom-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 40px 0;
+  }
+
+  .bottom-links .links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 40px;
+  }
+
+  .bottom-links .links span {
+    font-size: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 10px 0;
+  }
+
+  .bottom-links .links a {
+    text-decoration: none;
+    color: #a1a1a1;
+    padding: 10px 20px;
+  }
+  .footer-images {
+    display: flex;
+    overflow: hidden;
+  }
+  
+  .footer-images img {
+    width: 100%;
+    opacity: 0;
+    animation: slideIn 4s linear infinite; /* Adjust the duration as needed */
+  }
+  
+  .footer-images img:nth-child(1) {
+    animation-delay: 0s; /* Adjust the delay as needed */
+  }
+  
+  .footer-images img:nth-child(2) {
+    animation-delay: 5s; /* Adjust the delay as needed */
+  }
+  
+  .footer-images img:nth-child(3) {
+    animation-delay: 10s; /* Adjust the delay as needed */
+  }
+  
+  .footer-images img:nth-child(4) {
+    animation-delay: 15s; /* Adjust the delay as needed */
+  }
+  
+  .footer-images img:nth-child(5) {
+    animation-delay: 20s; /* Adjust the delay as needed */
+  }
+  
+  .footer-images img:nth-child(6) {
+    animation-delay: 25s; /* Adjust the delay as needed */
+  }
+  
+  @keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    10% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+  }
+
+  
+  
+  

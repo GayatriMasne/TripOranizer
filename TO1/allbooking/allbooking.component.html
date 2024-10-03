@@ -1,0 +1,56 @@
+<br/><br/><br/><br/>
+
+<p>YOUR Booking!</p>
+<table *ngIf="show">
+    <tr>
+  <th>id</th>
+   <th> name </th>  
+   <th> Birthdate </th>
+   <th> address </th>
+   <th> email </th>
+   <th> phone_number </th>
+   <th> alternate_number </th>
+   <th> aadharcard_no </th>
+   <th> pancard_no </th>
+   <th> destination </th>
+   <th> hotelcategory </th>
+   <th> noofdays </th>
+  <th> monthoftravel </th>
+  <th> triptype </th>
+  <th> adults </th>
+  <th> children </th>
+  <th> startdate </th>
+  <th> enddate</th>
+  <th> from:string</th>
+  <th> typeofpackage </th>
+  <th> timecall</th>
+  <th> touryouwant </th>
+  <th> additionalrequriment </th>
+  </tr>
+  
+   <tr *ngFor="let b of bkList">
+         <td>{{b.id}}</td>
+         <td>{{b.name}}</td>
+         <td>{{b.Birthdate}}</td>
+         <td>{{b.address}}</td>
+         <td>{{b.email}}</td>
+         <td>{{b.phone_number}}</td>
+         <td>{{b.alternate_number}}</td>
+         <td>{{b.aadharcard_no}}</td>
+         <td>{{b.pancard_no}}</td>
+         <td>{{b.destination}}</td>
+         <td>{{b.hotelcategory}}</td>
+         <td>{{b.noofdays}}</td>
+         <td>{{b.monthoftravel}}</td>
+         <td>{{b.triptype}}</td>
+         <td>{{b.adults}}</td>
+         <td>{{b.children}}</td>
+         <td>{{b.startdate}}</td>
+         <td>{{b.enddate}}</td>
+         <td>{{b.from}}</td>
+         <td>{{b.typeofpackage}}</td>
+         <td>{{b.timecall}}</td>
+         <td>{{b.touryouwant}}</td>
+         <td>{{b.additionalrequriment}}</td>
+   </tr>
+  </table>

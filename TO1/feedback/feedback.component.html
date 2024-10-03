@@ -1,0 +1,30 @@
+<h1 style="color:rgb(212, 90, 90); text-align: center; font-family: impact; text-shadow: 5px 5px 2px black; font-size: 50px; ">FeedBack form</h1>
+
+<fieldset>
+    <h2 style="color: black;">User FeedBack</h2>
+<form #myform="ngForm" (ngSubmit)="feedbackUser(myform)">
+        <label>Id</label>
+        <input type="number" name="id" ngModel/>
+        <label> Name:</label>
+        <input type="text" name="name" ngModel/>
+        
+        <label>Email Address:</label>
+        <input type="email" name="email_address" ngModel/>
+        
+        
+        <label> Phone Number: </label>
+        <input type="number" name="phone_number" ngModel/>
+       
+        <label> Comment:</label>
+        <textarea id="text" name="comet" ngModel></textarea>
+    
+       
+<div class="btn-div">
+
+    <button class="btn-submit" type="submit">Submit</button>
+        <button  class="btn-reset"  type="reset">Reset</button> 
+</div>
+    </form>
+    
+    
+</fieldset>

@@ -1,0 +1,215 @@
+<h1 style="color:rgb(212, 90, 90); text-align: center; font-family: impact; text-shadow: 5px 5px 2px black; font-size: 50px;">Booking form!</h1>
+
+<div class="grid-container">
+  <div class="grid-item">
+    <fieldset>
+      <h2>User Details</h2>
+      <form #myform="ngForm" (ngSubmit)="BookingUser(myform)">
+        <label> Name:</label>
+        <input type="string"   name="name" placeholder="enter the name"  ngModel/>
+        
+       
+        <label>BirthDate:</label>
+        <input type="date"  name="Birthdate"  ngModel/>
+
+        <label> Address:</label>
+        <textarea id="string"  name="address" placeholder="enter the address" ngModel></textarea>
+        
+        <hr> 
+        <h2> Add Contact Details</h2>
+        <label>Email Address:</label>
+        <input type="email" name="email" placeholder="enter the email address eg:xyz@gmail.com" ngModel />
+       
+       
+        <label> Phone Number: </label>
+        <input type="string" name="phoneno"  placeholder="enter the phone no (+91)" ngModel/>
+       
+    
+       
+        <label>AadharCard No</label>
+        <input type="string" name="aadharno" ngModel/>
+
+        
+      
+            <label>Alternate Number:</label>
+            <input type="string"name="alternateno" placeholder="enter the  another phone no" ngModel/>
+       
+      
+        <label>PAN Card No:</label>
+        <input type="string" name="pancardno" ngModel/>
+        
+
+        
+        
+          <hr> 
+          <h2> Select Destination</h2>
+          <label>Destination: </label>
+       
+          <select name="Where You Want To Go?  " name="destination"  placeholder="select the Destination"  ngModel>
+              <option>--select--</option>
+              <option>Manali</option>
+              <option>Goa</option>
+              <option>Shimla</option>
+              <option>Jammu & kashmir</option>
+              <option>Munnar, Kerala</option>
+              <option>Alleppey,Kerala</option>
+              <option>Gangtok,Sikkim</option>
+              <option>Coorg,Karnataka</option>
+              <option>Pondicherry</option>
+              <option>Shillong,Meghalaya</option>
+              <option>Lonavala,Maharashtra</option>
+              <option>Sandakphu Trek,Darjeeling</option>
+              <option>Bhangarh Fort,Alwar</option>
+              <option>Rann of Kutch</option>
+            <option>Jaisalmer</option>
+                <option>Spiti Valley</option>
+                <option>Tso Moriri</option>
+                <option>Rishikesh</option>
+                <option>Chandratal Lake</option>
+                <option>Sam Sand Dunes</option>
+                <option>Aujuna Beach</option>
+                <option>Mussoorie</option> 
+                <option>Bangalore</option>
+                <option>Gujarat</option>
+                <option>Chennai</option>   
+                <option>Mumbai</option>  
+                <option>Indore</option>  
+                <option>Delhi</option>  
+                <option>Hyderabad</option>  
+                <option>Kolkata</option>  
+                <option>Hampi,Karnataka</option>  
+                <option>Ladakh,India</option>  
+                <option>Ladakh</option>  
+              
+          </select>
+
+          
+          <label> Hotel Category</label>
+          <select name="Category" name="hotelcategory" placeholder="select the hotel"  ngModel>
+            <option>--select--</option>
+            <option>2  Start</option>
+            <option>3  Start</option>
+            <option>4  Start</option>
+            <option>5  Start</option>
+        </select>
+
+
+        <label> No of Days</label>
+        <select name="Days" name="noofdays" placeholder="select the no of days" ngModel >
+          <option>--select--</option>
+          <option>4</option>
+          <option>5 Start</option>
+          <option>6  Start</option>
+          <option>7  Start</option>
+          <option>8  Start</option>
+          <option>8+  Start</option>
+      </select>
+
+      <label> Month of Travel</label>
+      <select name="Month" name="monthoftravel" placeholder="select the month"  ngModel>
+        <option>--select--</option>
+        <option>January</option>
+        <option>February</option>
+        <option>March</option>
+        <option>April</option>
+        <option>May</option>
+        <option>June</option>
+        <option>July</option> 
+        <option>August</option>
+        <option>September</option>
+        <option>October</option>
+        <option>November</option>
+        <option>december</option>
+    </select>
+
+
+    <hr>
+    <h2> Trip Type</h2>
+    <label> What Kind of trip are you planning for? </label>
+    <select name="Type of trip" name="triptype" placeholder=" select type of trip" ngModel >
+        <option>--select--</option>
+        <option>Honeymoon</option>
+        <option>Family Trip</option>
+        <option>Trip with Friends</option>
+        <option>Romantic Trip</option>
+        <option>Trip with a Group</option>
+        <option>Solo</option>
+
+    </select>
+
+<h2> Add Travelers</h2>
+<label> Adults: (12+years)</label>
+<input type="number" name="adults" ngModel/>
+
+<label> Children:(0+years) </label>
+<input type="number" name="children" ngModel/>
+
+<hr>
+<h2> Select Departure Date </h2>
+<label> Start Date :</label>
+        <input type="date" name="startdate" ngModel />
+       
+        <label> End Date :</label>
+        <input type="date" name="enddate"  ngModel/>
+
+
+        <input type="checkbox" name="cbk" value="place" ngModel /> I have booked my tickets
+    
+    
+    <hr>
+    <h2> Enter Your City</h2>
+  <label>From </label>
+  <input type="text" name="from"  placeholder="enter the city name" ngModel />
+<hr>
+<h2> Additional Details</h2>
+
+<label>which type of package would you prefer? </label>
+  
+<select name="Type of package" name="typeofpackage" placeholder="enter the package " ngModel >
+    <option>--select--</option>
+    <option>Customizable Package</option>
+    <option>Bestselling Standard Package</option>
+    
+</select>
+
+<label>Preferred time to call </label>
+  
+<select name="timecall" ngModel >
+    <option>--select--</option>
+    <option>Anytime</option>
+    <option>10AM-12PM</option>
+    <option>12AM-2PM</option>
+    <option>2AM-4PM</option>
+    <option>4AM-6PM</option>
+    <option>After 6</option>
+    
+</select>
+
+
+   
+<label> Type of tour you want? </label>
+  
+<select name="touryouwant" placeholder="type of tour" ngModel>
+    <option>--select--</option>
+    <option>Honeymoon</option>
+    <option>Family</option>
+    <option>Adventure</option>
+    <option>Offbeat</option>
+    <option>Wildlife</option>
+    <option>Religious</option>
+    
+</select>
+
+<hr>
+<h2> Additional requirements</h2>
+<textarea id="text" name="additionalrequriment" placeholder="Hotel name if you already,special considerations  eg: kid Friendly,Arrival and departure date/time, if tickets booked?" ngModel></textarea>
+
+
+  <hr>
+  
+  <div class="btn-div">
+    <button class="btn-submit" type="submit" >Submit</button>
+    <button class="btn-reset" type="reset">Reset</button> 
+    
+  </div>
+  </form>

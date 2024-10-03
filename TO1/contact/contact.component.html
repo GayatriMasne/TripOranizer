@@ -1,0 +1,32 @@
+
+<h1 style="color:rgb(212, 90, 90); text-align: center; font-family: impact; text-shadow: 5px 5px 2px black; font-size: 50px; ">Contact Us</h1>
+
+<fieldset>
+    <h2 style="color: black;">Contact Us</h2>
+    <form #myform="ngForm" (ngSubmit)="contactUser(myform)">
+        <label> id:</label>
+        <input type="number" name="id" ngModel/>
+
+        <label> Your Name:</label>
+        <input type="text" name="your_name" ngModel/>
+        
+        <label> Your Email Address:</label>
+        <input type="email" name="email_address" ngModel/>
+        
+        
+        <label>Your Phone Number: </label>
+        <input type="number" name="phone_number" ngModel/>
+       
+        <label> how can we help?</label>
+        <textarea id="text" name="how_can_we_help" ngModel></textarea>
+    
+       
+<div class="btn-div">
+
+ <button class="btn-send" type="submit" >Send</button>
+     
+</div>
+    </form>
+    
+    
+</fieldset>  
